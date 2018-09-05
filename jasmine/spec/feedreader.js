@@ -64,6 +64,13 @@ $(function() {
          * hiding/showing of the menu element.
          */
 
+         describe('the menu', function(){
+            var body = document.body,
+            menuIcon = document.querySelector('.menu-icon-link');
+
+            it('')
+         })
+
          /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
           * should have two expectations: does the menu display when
