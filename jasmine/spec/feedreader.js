@@ -35,19 +35,20 @@ $(function() {
          * and that the URL is not empty.
          */
          it('url is defined', function(){
-            for (var i = 0; i < allFeeds.length; i++) {
-                allFeeds[i];
-            }
-
-            expect(allFeeds).toBeDefined();
-            expect(allFeeds).not.toBe(false);
+            allFeeds.forEach(function(feed){
+                expect(feed.url).toBeDefined();
+                expect(feed.url).not.toBe(0);
+                expect(feed.url).toMatch(/(http|https):\/\//)
+            })
          })
 
         /* TODO: Write a test that loops through each feed
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
+         it('name is defined', function(){
 
+         })
     });
 
 
