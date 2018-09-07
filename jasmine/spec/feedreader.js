@@ -37,7 +37,7 @@ $(function() {
          it('url is defined', function(){
             allFeeds.forEach(function(feed){
                 expect(feed.url).toBeDefined();
-                expect(feed.url).not.toBe(0);
+                expect(feed.url.length).not.toBe(0);
                 expect(feed.url).toMatch(/(http|https):\/\//)
             })
          })
@@ -77,13 +77,25 @@ $(function() {
 
             //this checks to see if the menu icon was clicked
         it('toggles the menu button to to check if hidden', function(){
-            menuIcon.click();
-            expect(body.className).not.toBe('menu-hidden');
+            
+             menuIcon.click();
+            expect(menuIcon.classList.toggle('menu-hidden')).toBe(true);
 
             menuIcon.click();
-            expect(body.className).toContain('menu-hidden')
+            expect(menuIcon.classList.toggle('menu-hidden')).toBe(false)
         })
-    })
+            
+        })
+
+
+//         it('should check if menu can show', function() {
+//  expect(document.querySelector('.menu-icon-link').classList.toggle('menu-hidden')).toBe(true);
+// });
+// it('should check if menu can hide', function() {
+// expect(document.querySelector('.menu-icon-link').classList.toggle('menu-hidden')).toBe(false);
+// });
+// });
+//     })
 
          
 
