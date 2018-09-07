@@ -87,16 +87,6 @@ $(function() {
             
         })
 
-
-//         it('should check if menu can show', function() {
-//  expect(document.querySelector('.menu-icon-link').classList.toggle('menu-hidden')).toBe(true);
-// });
-// it('should check if menu can hide', function() {
-// expect(document.querySelector('.menu-icon-link').classList.toggle('menu-hidden')).toBe(false);
-// });
-// });
-//     })
-
          
 
          
